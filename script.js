@@ -1,4 +1,5 @@
 const answer = document.getElementById('answer');
+let rightColor = [];
 let filledRow = 1;
 let actualRow = [];
 
@@ -27,8 +28,11 @@ const randomColor = () => {
 }
 
 const generateColors = () => {
-  const colors = answer.querySelectorAll('.colors');
-  colors.forEach(element => element.classList.add(randomColor()));
+  const colorsElement = answer.querySelectorAll('.colors');
+  for (let i = 0; i < 4; i += 1) {
+    rightColor.push(randomColor());
+  }
+  colorsElement.forEach((element, index) => element.classList.add(rightColor[index]));
 }
 
 window.onload = () => {
