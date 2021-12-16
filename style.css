@@ -1,0 +1,114 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.game {
+  background: #191919;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 30px 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0;
+  align-items: center;
+  position: relative;
+}
+
+.hint-area {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  min-width: 30px;
+  width: 30px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hint {
+  border: 1px solid gray;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.colors-area {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.colors {
+  border: 1px solid gray;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.answer {
+  position: absolute;
+  color: white;
+  height: 90%;
+  margin-left: 5%;
+  border-radius: 20px;
+  width: 90%;
+  background-color: #d8a547;
+  border: 1px solid gray;
+  display: flex;
+  text-align: justify;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-color-area {
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  height: 150px;
+  margin: 20px;
+  gap: 10px;
+}
+
+.select-color {
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+.blue {
+  background-color: blue;
+}
+.red {
+  background-color: red;
+}
+.yellow {
+  background-color: yellow;
+}
+.green {
+  background-color: green;
+}
+.orange {
+  background-color: orange;
+}
+.purple {
+  background-color: purple;
+}
