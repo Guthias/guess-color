@@ -1,3 +1,4 @@
+const answer = document.getElementById('answer');
 let filledRow = 1;
 
 function eventToColors() {
@@ -18,6 +19,17 @@ function clickColor(colorName) {
   Array.from(rowColors).find(element => element.classList.length === 1).classList.add(colorName);
 }
 
+const randomColor = () => {
+  const colors = ['blue', 'red', 'yellow', 'green', 'purple', 'orange'];
+  return colors[ Math.floor(Math.random() * colors.length)]
+}
+
+const generateColors = () => {
+  const colors = answer.querySelectorAll('.colors');
+  colors.forEach(element => element.classList.add(randomColor()));
+}
+
 window.onload = () => {
   eventToColors();
+  generateColors()
 }
