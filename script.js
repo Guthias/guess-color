@@ -4,13 +4,7 @@ let filledRow = 1;
 function eventToColors() {
   const colors = document.querySelectorAll('.select-color');
 
-  colors.forEach((element) => {
-    element.addEventListener('click' , () => {
-      let elementClass = element.className;
-      elementClass = elementClass.replace('select-color ', '');
-      clickColor(elementClass);
-    });
-  })
+  colors.forEach(element => element.addEventListener('click' , () => clickColor(element.classList[1])));
 }
 
 function clickColor(colorName) {
@@ -21,7 +15,7 @@ function clickColor(colorName) {
 
 const randomColor = () => {
   const colors = ['blue', 'red', 'yellow', 'green', 'purple', 'orange'];
-  return colors[ Math.floor(Math.random() * colors.length)]
+  return colors[Math.floor(Math.random() * colors.length)]
 }
 
 const generateColors = () => {
