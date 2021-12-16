@@ -1,16 +1,24 @@
 const answer = document.getElementById('answer');
 let filledRow = 1;
+let actualRow = [];
 
-function eventToColors() {
+const eventToColors = () => {
   const colors = document.querySelectorAll('.select-color');
-
-  colors.forEach(element => element.addEventListener('click' , () => clickColor(element.classList[1])));
+  colors.forEach(element => element.addEventListener('click' , () => makeMove(element.classList[1])));
 }
 
-function clickColor(colorName) {
+function makeMove(colorName) {
   const rowList = document.querySelectorAll('.row');
   const rowColors = rowList[filledRow].querySelectorAll('.colors');
-  Array.from(rowColors).find(element => element.classList.length === 1).classList.add(colorName);
+  const result = Array.from(rowColors).find(element => element.classList.length === 1);
+  if (result) {
+    result.classList.add(colorName);
+    actualRow.push(colorName);
+    if (actualRow.length === 4) {
+      filledRow += 1;
+      actualRow = [];
+    }
+  }
 }
 
 const randomColor = () => {
