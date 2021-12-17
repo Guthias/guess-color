@@ -61,15 +61,21 @@ body, html {
   position: absolute;
   color: white;
   height: 90%;
-  margin-left: 5%;
+  margin-left: 2.5%;
   border-radius: 20px;
-  width: 90%;
+  width: 95%;
   background-color: #d8a547;
   border: 1px solid gray;
   display: flex;
   text-align: justify;
   justify-content: center;
   align-items: center;
+  transition: all ease-in-out .3s;
+  z-index: 1000;
+}
+
+.answer.show {
+  transform: translateY(70%);
 }
 
 .select-color-area {
