@@ -28,7 +28,7 @@ const verifyRow = (actual) => {
       rightClone.splice(result, 1);
     }
   });
-
+  if (hint.green === 4) showWin();
   return hint;
 }
 
@@ -64,6 +64,15 @@ const renderHint = (hint, row) => {
 const randomColor = () => {
   const colors = ['blue', 'red', 'yellow', 'green', 'purple', 'orange'];
   return colors[Math.floor(Math.random() * colors.length)]
+}
+
+const showWin = () => {
+  showAnswer();
+  alert('Parabéns você venceu');
+}
+
+const showAnswer = () => {
+  answer.classList.add('show');
 }
 
 const generateColors = () => {
