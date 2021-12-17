@@ -13,6 +13,7 @@ body {
   background: linear-gradient(to top, #2948ff, #396afc);
   background-position: center;
   background-attachment: fixed;
+  font-family: Roboto, sans-serif;
 }
 
 .game {
@@ -131,23 +132,64 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
+  color: white;
+  font-weight: 500;
+}
+
+.rules-title {
+  width: 100%;
+  text-align: left;
+  color: #ffae00;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.rules {
+  margin: 0;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+.rules-caption {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+  list-style: none;
+  width: 100%;
 }
 
 .blue {
   background-color: #26D0CE;
 }
+
 .red {
   background-color: #ED213A;
 }
+
 .yellow {
   background-color: #EAF205;
 }
+
 .green {
   background-color: #38F205;
 }
+
 .orange {
   background-color: #fe8c00;
 }
+
 .purple {
   background-color: #9407F2;
+}
+
+.green-color {
+  color: #38F205;
+}
+
+.yellow-color {
+  color: #EAF205;
+}
+
+.red-color {
+  color: #ED213A;
 }

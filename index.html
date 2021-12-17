@@ -6,14 +6,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guess Color</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet"> 
+
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
   <main>
     <div class="rules-area">
-      <h2>Regras</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi similique iusto magni explicabo inventore magnam repellendus minima, alias amet quod aspernatur ipsum doloribus voluptatum incidunt consequatur vero. Vel, deserunt sequi.</p>
+      <h2 class="rules-title">Como Jogar ?</h2>
+      <p class="rules">
+        Guess color é um jogo onde o seu objetivo é advinhar quais são as 4 cores que estão escondidas no topo, sempre que você preencher completamente uma fileira as 4 bolinhas do lado esquerdo te daram uma dica
+      </p>
+
+      <h3 class="rules-title">Legenda</h3>
+
+      <ul class="rules-caption">
+        <li>
+          <span class="green-color">Verde:</span> Uma cor está certa e no lugar certo
+        </li>
+        <li>
+          <span class="yellow-color">Amarelo:</span> Uma cor está certa e no lugar errado
+        </li>
+        <li>
+          <span class="red-color">Vermelho:</span> A cor está errada
+        </li>
+      </ul>
+
+      <p class="rules">
+        Obs: As bolinhas não mostram qual casa está certa e pode conter cores repetidas
+      </p>
+  
     </div>
+
     <div class="game-area">
       <div class="game">
         <div id="answer" class="row">
