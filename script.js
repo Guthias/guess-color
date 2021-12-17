@@ -8,6 +8,28 @@ const eventToColors = () => {
   colors.forEach(element => element.addEventListener('click' , () => makeMove(element.classList[1])));
 }
 
+const verifyRow = (actual) => {
+  let rightClone = [...rightColor];
+
+  const hint = {
+    green: 0,
+    yellow: 0
+  }
+
+  actual.forEach((color, index) => {
+    if(rightColor[index] === actual[index]) {
+      hint.green += 1;
+      hint.yellow -= 1;
+    }
+
+    if(rightClone.includes(color)) {
+      let result = rightClone.indexOf(color);
+      hint.yellow += 1;
+      rightClone.splice(result, 1);
+    }
+  });
+}
+
 function makeMove(colorName) {
   const rowList = document.querySelectorAll('.row');
   const rowColors = rowList[filledRow].querySelectorAll('.colors');
@@ -16,6 +38,7 @@ function makeMove(colorName) {
     result.classList.add(colorName);
     actualRow.push(colorName);
     if (actualRow.length === 4) {
+      verifyRow(actualRow);
       filledRow += 1;
       actualRow = [];
     }
