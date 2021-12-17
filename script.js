@@ -28,6 +28,8 @@ const verifyRow = (actual) => {
       rightClone.splice(result, 1);
     }
   });
+
+  return hint;
 }
 
 function makeMove(colorName) {
@@ -38,9 +40,23 @@ function makeMove(colorName) {
     result.classList.add(colorName);
     actualRow.push(colorName);
     if (actualRow.length === 4) {
-      verifyRow(actualRow);
+      renderHint(verifyRow(actualRow), filledRow);
       filledRow += 1;
       actualRow = [];
+    }
+  }
+}
+
+const renderHint = (hint, row) => {
+  const rowList = document.querySelectorAll('.row');
+  const hintItem = rowList[row].querySelectorAll('.hint');
+  for (let i = 0; i < 4; i += 1) {
+    if (hint.green > i) {
+      hintItem[i].classList.add('green');
+    } else if (hint.green + hint.yellow > i) {
+      hintItem[i].classList.add('yellow');
+    } else {
+      hintItem[i].classList.add('red');
     }
   }
 }
