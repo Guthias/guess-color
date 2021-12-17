@@ -121,9 +121,15 @@ main {
   flex-direction: row;
   width: 90%;
   margin: 0 auto;
+  align-items: center;
+  height: 100%;
 }
 
 .rules-area, .game-area, .select-color-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
 }
 
