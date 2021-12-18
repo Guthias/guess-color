@@ -193,3 +193,63 @@ main {
 .red-color {
   color: #ED213A;
 }
+
+.custom-alert-background {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-alert-area {
+  width: 600px;
+}
+
+.custom-alert-body {
+  padding: 15px;
+  background-color: white;
+}
+
+.custom-alert-header {
+  background-color: #0575E6;
+  padding: 10px 20px;
+  font-weight: 700;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: white;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.custom-alert-close {
+  background-color: #D90B1C;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  transition: all ease-in-out 0.2s;
+}
+
+.custom-alert-close:hover {
+  background-color: #9c0f1b;
+}
+
+.custom-alert-bottom {
+  background-color: #0575E6;
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  padding: 10px 20px;
+}
