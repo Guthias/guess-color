@@ -68,7 +68,7 @@ const randomColor = () => {
 
 const showWin = () => {
   showAnswer();
-  alert('Parabéns você venceu');
+  customAlert('Você venceu', 'Parabéns você venceu :D');
 }
 
 const showAnswer = () => {
