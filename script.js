@@ -83,6 +83,31 @@ const generateColors = () => {
   colorsElement.forEach((element, index) => element.classList.add(rightColor[index]));
 }
 
+const customAlert = (title, content) => {
+  const element = document.createElement('div');
+  element.className = 'custom-alert-background';
+  element.id = 'custom-alert';
+
+  element.innerHTML = `<div class="custom-alert-area">
+    <div class="custom-alert-header">
+      <div class="custom-alert-title">
+        ${title}
+      </div>
+    </div>
+    <div class="custom-alert-body">
+     ${content}
+    </div>
+    <div class="custom-alert-bottom"></div>
+  </div>`
+
+  element.addEventListener('click', (event) => {
+    if(event.target === document.getElementById('custom-alert')) {
+      document.getElementById('custom-alert').remove();
+    }
+  })
+  document.getElementById('body').appendChild(element);  
+}
+
 window.onload = () => {
   eventToColors();
   generateColors()
