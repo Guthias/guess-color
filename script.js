@@ -76,7 +76,7 @@ const showAnswer = () => {
 }
 
 const generateColors = () => {
-  const colorsElement = answer.querySelectorAll('.colors');
+  const colorsElement = document.querySelectorAll('.answer-colors .colors');
   for (let i = 0; i < 4; i += 1) {
     rightColor.push(randomColor());
   }
